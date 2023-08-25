@@ -1,0 +1,51 @@
+.introduction {
+    margin-top: 8%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.animated {
+	font-family: monospace;
+	font-size: 6rem;
+	font-weight: bolder;
+	letter-spacing: 2px;
+	color: #f35626;
+	background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 10s infinite linear;
+    margin-bottom: 20px;
+}
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+#cat {
+    width: 250px;
+    height: 300px;
+    display: block;
+    margin: 20px auto;
+}
+
+#egg {
+    width: 5px;
+    height: 5px;
+    background-color: red;
+    color: green;
+    position: fixed;
+    top: 0;
+    transition: 5s;
+    transition-delay: 3s;
+}
+
+#egg:hover {
+    transform-origin: top left;
+    transform: scale(30);
+}
