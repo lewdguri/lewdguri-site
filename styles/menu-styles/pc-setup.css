@@ -1,0 +1,62 @@
+.heading {
+    margin-top: 1em;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+}
+
+.text {
+    text-align: center;
+    overflow-wrap: normal;
+    width: 150px;
+    overflow: hidden;
+    opacity: 0;
+    position: relative;
+    transition: opacity 0.5s;
+    opacity: 0;
+    margin: 0 30px
+}
+
+.storage-text {
+position: relative;
+}
+
+/* Styles for the grid container */
+.rig {
+    margin: auto;
+    margin-top: 1em;
+    width: max-content;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+/* Styles for the images within the grid */
+.rig img {
+    width: 184px;
+    height: 184px;
+    display: block;
+    margin: 0 0;
+    transition: ease 0.2s;
+}
+
+/* Hover effect for images */
+.rig img:hover {
+    transform: scale(1.1);
+}
+
+/* Hover effect for text elements when hovering over images */
+.rig-item:hover .text {
+    opacity: 100;
+}
+
+/* Styles for the individual rig items */
+.rig-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
