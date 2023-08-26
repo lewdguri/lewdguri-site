@@ -6,8 +6,15 @@
   --accent: #9149d0;
 }
 
+.icon {
+  width: 200px;
+  height: auto;
+  margin: 10px auto;
+  display: block;
+  transition: transform 1s ease-in-out;
+}
+
 .introduction, .about {
-  margin-top: 8%;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 25px;
@@ -42,8 +49,8 @@
 }
 
 #cat {
-    width: 250px;
-    height: 300px;
+    width: 200px;
+    height: 250px;
     display: block;
     margin: 20px auto;
 }
@@ -57,6 +64,10 @@
     top: 0;
     transition: 5s;
     transition-delay: 3s;
+}
+
+.icon:hover {
+  transform: rotate(720deg);
 }
 
 #egg:hover {
