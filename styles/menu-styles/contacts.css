@@ -5,3 +5,65 @@
     --secondary: #28103d;
     --accent: #9149d0;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+.heading {
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    color: var(--text);
+    width: fit-content;
+    transition: transform .2s ease;
+}
+
+.contact-list {
+    text-align: center;
+}
+
+.contact {
+    width: fit-content;
+    margin: 0 20px;
+    display: inline-block;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;    
+}
+
+.logo {
+    width: 124px;
+    height: auto;
+    transition: transform .7s ease-in-out;
+}
+
+.github {
+    margin-top: 5rem;
+}
+
+.text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.contact:hover .logo {
+    transform: rotate(360deg);
+}
+
+.contact:hover .text {
+    opacity: 1;
+}
+
+.heading:hover {
+    transform: scale(1.1);
+}

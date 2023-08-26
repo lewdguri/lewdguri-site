@@ -7,25 +7,25 @@
 }
 
 .introduction {
-    margin-top: 8%;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
+  margin-top: 8%;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
 }
 
 .animated {
-	font-family: monospace;
-	font-size: 6rem;
-	font-weight: bolder;
-	letter-spacing: 2px;
-	color: white;
-	background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
-	-webkit-background-clip: text;
-	background-clip: text;
-    -webkit-text-fill-color: transparent;
-	-webkit-animation: hue 10s infinite linear;
-    animation: hue 10s infinite linear;
-    margin-bottom: 20px;
+  font-family: monospace;
+  font-size: 6rem;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  color: white;
+  background-image: -webkit-linear-gradient(92deg, #c471f5 0%, #fa71cd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 10s infinite linear;
+  animation: hue 10s infinite linear;
+  margin-bottom: 20px;
 }
 
 @keyframes hue {
