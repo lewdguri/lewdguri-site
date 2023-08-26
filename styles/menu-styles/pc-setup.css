@@ -1,11 +1,22 @@
+:root {
+    --text: #e9dbf6;
+    --background: #13071c;
+    --primary: #772fb6;
+    --secondary: #28103d;
+    --accent: #9149d0;
+}
+
 .heading {
     margin-top: 1em;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 50px;
+    color: var(--text);
 }
 
 .text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--text);
     text-align: center;
     overflow-wrap: normal;
     width: 150px;
