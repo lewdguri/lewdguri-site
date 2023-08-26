@@ -22,17 +22,17 @@
     transition: transform .2s ease;
 }
 
+/* some ting */
+
 .contact-list {
     text-align: center;
 }
 
 .contact {
-    width: fit-content;
-    margin: 0 20px;
+    width: min-content;
+    margin: 5rem 20px;
     display: inline-block;
     flex-direction: column;
-    align-self: center;
-    justify-content: center;    
 }
 
 .logo {
@@ -41,9 +41,7 @@
     transition: transform .7s ease-in-out;
 }
 
-.github {
-    margin-top: 5rem;
-}
+/* another ting */
 
 .text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -54,7 +52,10 @@
     margin-top: 20px;
     opacity: 0;
     transition: opacity 0.5s;
+    overflow-wrap: break-word;
 }
+
+/* hover tings */
 
 .contact:hover .logo {
     transform: rotate(360deg);
