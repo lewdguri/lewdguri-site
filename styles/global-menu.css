@@ -38,6 +38,7 @@ body {
     bottom: 0;
     transition: bottom ease 0.3s;
     cursor: pointer;
+    position: relative;
 }
 
 .menu .button:hover {
@@ -49,7 +50,21 @@ body {
     flex: auto;
 }
 
-#pfp {
+.pfp {
     height: 112px;
     width: auto;
+    position: relative;
+    transition: opacity 1s ease;
+}
+
+.rat {
+    height: 112px;
+    width: auto;
+    position: absolute;
+    right: 0;
+}
+
+.pfp:hover {
+    opacity: 0;
+    transition-delay: 5s;
 }
