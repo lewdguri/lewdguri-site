@@ -6,12 +6,8 @@
   --accent: #9149d0;
 }
 
-.icon {
-  width: 200px;
-  height: auto;
-  margin: 10px auto;
-  display: block;
-  transition: transform 1s ease-in-out;
+body {
+  text-align: center;
 }
 
 .introduction, .about {
@@ -58,16 +54,52 @@
 #egg {
     width: 5px;
     height: 5px;
-    background-color: red;
-    color: green;
     position: fixed;
     top: 0;
+    left: 0;
     transition: 5s;
     transition-delay: 3s;
 }
 
+.icon {
+  width: 200px;
+  height: auto;
+  margin: 10px auto;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.cat-icon {
+  animation: icon-spin 360s forwards paused linear;
+  transition: transition;
+}
+
 .icon:hover {
-  transform: rotate(720deg);
+  animation-play-state: running;
+  transform: scale(1.1);
+}
+
+.shrimp:active {
+  animation: enlarge 15s;
+  animation-delay: 5s;
+}
+
+@keyframes enlarge {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(20);
+  }
+}
+
+@keyframes icon-spin {
+  from {
+    transform: rotate(0deg);
+  } 
+  to {
+    transform: rotate(129600deg);
+  }
 }
 
 #egg:hover {
