@@ -23,9 +23,25 @@
 
         <div class="introduction">
             <h2>Hi! I'm</h2>
-            <h1 class="animated">&lt;lewdguri/&gt;</h1>
+            <h1 class="animated" id="shrimp-text">&lt;lewdguri/&gt;</h1>
             <h2>thanks for visiting my site.</h2>
         </div>
+
+        <script>
+            let shrimp = document.querySelector(".shrimp");
+            let text = document.querySelector("#shrimp-text");
+            let clicked = false;
+
+            shrimp.addEventListener("click", (e) => {
+                if(!clicked) {
+                    text.textContent = "It's as shrimple as that";
+                    clicked = true;
+                } else {
+                    text.textContent = "<lewdguri/>";
+                    clicked = false;
+                };
+            });
+        </script>
 
         <img id="cat" alt="i can cat gif" src="https://tenor.com/view/i-can-cat-cat-i-can-gif-26113449.gif">
         <img id="egg" alt="easter egg" src="https://tenor.com/view/css-html-computers-coding-programming-gif-22307686.gif">

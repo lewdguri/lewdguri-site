@@ -79,7 +79,7 @@ body {
   transform: scale(1.1);
 }
 
-.shrimp:active {
+.shrimp:hover {
   animation: enlarge 15s;
   animation-delay: 5s;
 }
