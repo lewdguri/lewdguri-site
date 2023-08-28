@@ -11,7 +11,7 @@
 }
 
 .heading {
-    margin-top: 1em;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -30,7 +30,8 @@
 
 .contact {
     width: min-content;
-    margin: 5rem 20px;
+    height: 100px;
+    margin: 20px;
     display: inline-block;
     flex-direction: column;
 }
@@ -50,9 +51,22 @@
     display: block;
     text-decoration: none;
     margin-top: 20px;
+
+}
+
+.upper {
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.lower {
     opacity: 0;
     transition: opacity 0.5s;
     overflow-wrap: break-word;
+}
+
+.other-list {
+    text-align: center;
 }
 
 /* hover tings */
