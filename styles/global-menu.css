@@ -51,8 +51,6 @@ body {
 }
 
 .pfp {
-    height: 112px;
-    width: auto;
     position: relative;
     transition: opacity 1s ease;
 }
