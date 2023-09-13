@@ -13,7 +13,7 @@ body {
 .introduction, .about {
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 25px;
+  font-size: 140%;
 }
 
 .about {
@@ -22,9 +22,8 @@ body {
 
 .animated {
   font-family: monospace;
-  font-size: 6rem;
+  font-size: 6vw;
   font-weight: bolder;
-  letter-spacing: 2px;
   color: white;
   background-image: -webkit-linear-gradient(92deg, #c471f5 0%, #fa71cd 100%);
   -webkit-background-clip: text;
@@ -45,8 +44,8 @@ body {
 }
 
 #cat {
-    width: 200px;
-    height: 250px;
+    width: 12rem;
+    height: 15rem;
     display: block;
     margin: 20px auto;
 }
@@ -62,7 +61,7 @@ body {
 }
 
 .icon {
-  width: 200px;
+  width: 10rem;
   height: auto;
   margin: 10px auto;
   display: inline-block;
@@ -105,4 +104,14 @@ body {
 #egg:hover {
     transform-origin: top left;
     transform: scale(30);
+}
+
+@media (max-width: 500px) {
+  .animated {
+    font-size: 3rem
+  }
+
+  .introduction {
+    font-size: 1.2rem;
+  }
 }
