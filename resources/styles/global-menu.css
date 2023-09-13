@@ -63,7 +63,7 @@ body {
     transition-delay: 5s;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 501px) {
     
     .menu .button:hover {
         bottom: -15px;
