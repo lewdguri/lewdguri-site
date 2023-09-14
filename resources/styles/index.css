@@ -44,20 +44,18 @@ body {
 }
 
 #cat {
-    width: 12rem;
-    height: 15rem;
-    display: block;
-    margin: 20px auto;
+  height: 16rem;
+  display: block;
+  margin: 20px auto;
 }
 
 #egg {
-    width: 5px;
-    height: 5px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    transition: 5s;
-    transition-delay: 3s;
+  width: 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 5s;
+  transition-delay: 3s;
 }
 
 .icon {

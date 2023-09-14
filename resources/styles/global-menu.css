@@ -54,18 +54,18 @@ body {
     width: 112px;
     height: 112px;
     position: relative;
-    transition: opacity 1s ease;
 }
 
 .rat {
     height: 112px;
-    width: auto;
     position: absolute;
     right: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
 }
 
-.pfp:hover {
-    opacity: 0;
+.rat:hover {
+    opacity: 1;
     transition-delay: 5s;
 }
 
@@ -91,7 +91,7 @@ body {
         width: 100%;
     }
 
-    .menu img {
+    .menu img, .menu video {
         display: none;
     }
 
