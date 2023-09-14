@@ -16,6 +16,12 @@ body {
     color: var(--text);
 }
 
+.circle-cropper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
 .menu {
     background-color: var(--primary);    
     display: flex;

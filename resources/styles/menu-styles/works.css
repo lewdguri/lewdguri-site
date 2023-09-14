@@ -22,14 +22,6 @@
     justify-content: center;
 }
 
-.circle-cropper {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-  }
-
 .card {
     border: 1px solid var(--primary);
     box-shadow: 2px 4px 16px rgba(0,0,0,.06);
