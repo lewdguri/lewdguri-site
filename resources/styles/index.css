@@ -13,7 +13,13 @@ body {
 .introduction, .about {
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 140%;
+  font-size: 130%;
+}
+
+.img-wrapper {
+  width: 100%;
+  height: max-content;
+  overflow-x: hidden;
 }
 
 .about {
@@ -21,6 +27,7 @@ body {
 }
 
 .animated {
+  overflow-x: hidden;
   font-family: monospace;
   font-size: 6vw;
   font-weight: bolder;
@@ -31,7 +38,7 @@ body {
   -webkit-text-fill-color: transparent;
   -webkit-animation: hue 10s infinite linear;
   animation: hue 10s infinite linear;
-  margin-bottom: 20px;
+  margin: 10px auto;
 }
 
 @keyframes hue {
