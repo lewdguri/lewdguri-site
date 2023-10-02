@@ -1,0 +1,6 @@
+
+*.config
+*.vsidx
+.vs/lewdguri-site/v17/.wsuo
+*.sqlite
+.vs/VSWorkspaceState.json
