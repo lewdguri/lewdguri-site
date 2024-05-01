@@ -1,6 +1,7 @@
 const userInput = document.querySelector(".terminal-input");
 const userInputArea = document.querySelector(".terminal-input-area");
 let previousCommands = [];
+let userInputs = "";
 let counter = 0;
 
 //auto scroll to bottom & prevent arrow keys from scrolling
@@ -16,13 +17,14 @@ window.addEventListener("keydown", function(e) {
     }
 }, false);
 
-const interesting = () => {
-    window.open("./resources/images/interesting.png", '_blank').focus();
-    return "";
-};
-
 //user input
-document.body.addEventListener("keydown", (event) => {
+document.querySelector(".terminal-input-area input").addEventListener("keydown", (event) => {
+    userInputs += event.key;
+    if(userInputs.match(/ArrowUpArrowRightArrowDownArrowDownArrowDown/g)) {
+        window.open("./resources/images/interesting.png", '_blank').focus();
+        userInputs = "";
+    };
+    
     if(event.key == "Enter") {
         update();
         execute(userInput.value);
@@ -30,7 +32,7 @@ document.body.addEventListener("keydown", (event) => {
         counter = 0;
     } else if(event.key == "ArrowUp") {
         counter = Math.min(counter+1, previousCommands.length);
-        userInput.value = previousCommands[counter-1] || interesting();
+        userInput.value = previousCommands[counter-1] || "";
     } else if(event.key == "ArrowDown") {
         counter = Math.max(counter-1, 0);
         userInput.value = previousCommands[counter-1] || "";
