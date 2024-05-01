@@ -1,64 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
-        <link rel="icon" type="image/x-icon" href="./resources/images/favicon.png">
-        <link rel="stylesheet" href="./resources/styles/index.css">
-        <link rel="stylesheet" href="./resources/styles/global-menu.css">
+        <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css'>
+        <link rel="stylesheet" href="./resources/css/style.css">
+        <link rel="icon" type="image/x-icon" href="./old/resources/images/favicon.png">
 
-        <meta content="lewdguri's personal home site" name="description">
+        <meta content="gurian's terminal" name="description">
         <meta content="lewdguri.xyz" property="og:title"/>
         <meta content="My personal site" property="og:description"/>
         <meta content="https://www.lewdguri.xyz" property="og:url"/>
-        <meta content="https://www.lewdguri.xyz/resources/images/favicon.png" property="og:image"/>
+        <meta content="https://www.lewdguri.xyz/old/resources/images/favicon.png" property="og:image"/>
         <meta content="#8781bd" data-react-helmet="true" name="theme-color"/>
+
+        <title>Terminal</title>
     </head>
     <body>
-        <div class="menu">
-            <a rel="noopener noreferrer" href="./index.html"><button class="button">Home</button></a>
-            <a rel="noopener noreferrer" href="./menu/pc-setup.html"><button class="button">PC setup</button></a>
-            <a rel="noopener noreferrer" href="./menu/works.html"><button class="button">Works</button></a>
-            <a rel="noopener noreferrer" href="./menu/contacts.html"><button class="button">Contacts & Others</button></a>
-            <img class="pfp" alt="my profile picture" src="./resources/images/profile-picture.png">
-            <video class="rat" loop autoplay muted>
-                <source src="./resources/images/rat.webm">
-            </video>
+        <div class="container">
+            <div class="terminal-container">
+                <div>
+                    <div class="terminal-banner">
+                        <pre>
+                         _             ____  _____
+       ____ ___  _______(_)___ _____  / __ \/ ___/
+      / __ `/ / / / ___/ / __ `/ __ \/ / / /\__ \ 
+     / /_/ / /_/ / /  / / /_/ / / / / /_/ /___/ / 
+     \__, /\__,_/_/  /_/\__,_/_/ /_/\____//____/  
+    /____/                                                                 
+                        </pre>
+                    </div>
+                    <div class="terminal-welcome">
+                        <div class="terminal-output-text">Welcome to my website! <a href="./old/index.html">Old website</a> (no longer updated)</div>
+                        <div class="terminal-output-text">Type 'help' to see a list of available commands.</div>
+                    </div>
+                </div>
+                <div class="terminal-input-area">
+                    <span class="terminal-prompt">&gt;</span>
+                    <input type="text" class="terminal-input" name="input" spellcheck="false" autocapitalize="off" autocomplete="off" value="">
+                </div>
+            </div>
         </div>
-        <div class="img-wrapper">
-            <img class="icon cat-icon" alt="my icon" src="./resources/images/favicon.png">
-            <img class="icon shrimp" alt="shrimp" src="./resources/images/shrimp.png">
-        </div>
-
-        <div class="introduction">
-            <h2>Hi! I'm</h2>
-            <h1 class="animated" id="shrimp-text">&lt;gurian/&gt;</h1>
-            <h2>thanks for visiting my site.</h2>
-        </div>
-
-        <script>
-            let shrimp = document.querySelector(".shrimp");
-            let text = document.querySelector("#shrimp-text");
-            let clicked = false;
-
-            shrimp.addEventListener("click", (e) => {
-                if(!clicked) {
-                    text.textContent = "It's as shrimple as that";
-                    clicked = true;
-                } else {
-                    text.textContent = "<lewdguri/>";
-                    clicked = false;
-                };
-            });
-        </script>
-
-        <video id="cat" loop autoplay muted>
-            <source src="./resources/images/i-can-cat.webm">
-        </video>
-        <video id="egg" loop autoplay muted>
-            <source src="./resources/images/css.webm">
-        </video>
-        <h3 class="about">I also like cats</h3>
+        <script src="./resources/data/commandlist.js"></script>
+        <script src="./resources/js/index.js"></script>
     </body>
 </html>

@@ -1,0 +1,64 @@
+* {
+    background-color: black;
+    font-family: Hack, monospace;
+    font-size: medium;
+    color: lightgray;
+    cursor: text;
+}
+
+html, body {
+    height: 100%;
+}
+
+a {
+    color: rgba(186,82,255,1);
+}
+
+a:hover {
+    color: black;
+    background-color: rgba(186,82,255,1);
+    cursor: pointer;
+}
+
+.terminal-container {
+    margin-left: 10px;
+}
+
+.terminal-input-area, .terminal-record {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+}
+
+.terminal-banner pre {
+    color: rgba(186,82,255,1);
+    text-shadow: 0 0 10px rgba(186,82,255);
+}
+
+.terminal-record .terminal-prompt {
+    margin-right: 15px;
+}
+
+.terminal-prompt {
+    margin-right: 5px;
+}
+
+.terminal-input {
+    background: transparent;
+    border: 0;
+    outline: none;
+    width: 100%
+}
+
+.error {
+    color: red;
+}
+
+.terminal-container p {
+    margin-left: 10px;
+}
+
+.glow {
+    color: white;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+}
