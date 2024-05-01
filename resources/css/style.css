@@ -20,6 +20,11 @@ a:hover {
     cursor: pointer;
 }
 
+p{
+    max-width:45%;
+    word-wrap:break-word;
+}
+
 .terminal-container {
     margin-left: 10px;
 }
@@ -32,7 +37,7 @@ a:hover {
 
 .terminal-banner pre {
     color: rgba(186,82,255,1);
-    text-shadow: 0 0 10px rgba(186,82,255);
+    text-shadow: 0 0 1 0px rgba(186,82,255);
 }
 
 .terminal-record .terminal-prompt {

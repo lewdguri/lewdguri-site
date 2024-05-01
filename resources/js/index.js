@@ -16,6 +16,10 @@ window.addEventListener("keydown", function(e) {
     }
 }, false);
 
+const interesting = () => {
+    window.open("./resources/images/interesting.png", '_blank').focus();
+    return "";
+};
 
 //user input
 document.body.addEventListener("keydown", (event) => {
@@ -26,12 +30,12 @@ document.body.addEventListener("keydown", (event) => {
         counter = 0;
     } else if(event.key == "ArrowUp") {
         counter = Math.min(counter+1, previousCommands.length);
-        userInput.value = previousCommands[counter-1];
+        userInput.value = previousCommands[counter-1] || interesting();
     } else if(event.key == "ArrowDown") {
         counter = Math.max(counter-1, 0);
         userInput.value = previousCommands[counter-1] || "";
     }
-})
+});
 
 //execute user input
 const execute = (command) => {
@@ -53,7 +57,7 @@ const execute = (command) => {
         }
     }
     error(command);
-}
+};
 
 //update terminal
 const update = () => {
@@ -81,4 +85,4 @@ const error = (command) => {
         Type 'help' to view a list of available commands
     `;
     document.querySelector(".terminal-container").insertBefore(p, userInputArea);
-}
+};
