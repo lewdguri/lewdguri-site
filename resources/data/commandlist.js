@@ -1,7 +1,7 @@
 const commands = [
     {
         name: "clear",
-        info: "clear the terminal",
+        info: "Clear the terminal",
         type: "function",
         output: () => {
             let terminalContainer = document.querySelector(".terminal-container");
@@ -12,7 +12,7 @@ const commands = [
     },
     {
         name: "contact",
-        info: "contact me",
+        info: "Beep boop",
         type: "text",
         output: `
             <span class="glow">GitHub</span><br>
@@ -23,7 +23,7 @@ const commands = [
     },
     {
         name: "other",
-        info: "some other stuff",
+        info: "Some other stuff",
         type: "text",
         output: `
             <span class="glow">My friend's site</span><br>
@@ -34,7 +34,7 @@ const commands = [
     },
     {
         name: "setup",
-        info: "my pc setup",
+        info: "My pc setup",
         type: "text",
         output: `
             <span class="glow">CPU</span> - AMD Ryzen 7 5800X3D<br>
@@ -50,7 +50,7 @@ const commands = [
     },
     {
         name: "random",
-        info: "execute random command",
+        info: "Execute random command",
         type: "function",
         output: () => {
             let random = Math.floor(Math.random() * commands.length);
@@ -59,7 +59,7 @@ const commands = [
     },
     {
         name: "website",
-        info: "information about this website",
+        info: "Information about this website",
         type: "text",
         output: `
             I made this website using <span class="glow">HTML</span>, <span class="glow">CSS</span>, and <span class="glow">JavaScript</span>. It's hosted on GitHub Pages.<br>
@@ -90,7 +90,7 @@ const commands = [
     },
     {
         name: "about",
-        info: "if you want to know more about me",
+        info: "If you want to know more about me",
         type: "text",
         output: `
             Hi, I'm <span class="glow">Gurian</span>. I'm a 16 year old student from <span class="glow">Czech Republic</span>. My interests include game and web development, <span class="glow">gaming (for Super Earth!)</span> and procrastinating. 
@@ -101,7 +101,7 @@ const commands = [
 
 let helpCommand = {
     name: "help",
-    info: "list of available commands",
+    info: "List of available commands",
     type: "text",
     output: "<span class=\"glow\">help</span><br> &emsp;- list of all available commands<br>"
 }
