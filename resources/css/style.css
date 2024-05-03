@@ -68,15 +68,12 @@ p{
     text-shadow: 0 0 10px rgb(255, 255, 255);
 }
 
-.small-banner {
-    display: none;
+.banner {
+    font-size: large;
 }
 
 @media only screen and (max-width: 700px) {
-    .large-banner {
-        display: none;
-    }
-    .small-banner {
-        display: block;
+    .banner {
+        font-size: x-small;
     }
   }
