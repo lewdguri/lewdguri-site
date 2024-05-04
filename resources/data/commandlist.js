@@ -85,7 +85,9 @@ const commands = [
             <span class="glow">Kitty picker</span><br>
             &emsp;- Random cat image generator I made with my friend using a free cat API. You can view the site <a target="_blank" rel="noopener noreferrer" href="https://lewdguri.github.io/kitty-picker/">here</a>.<br>
             <span class="glow">Todo List</span><br>
-            &emsp;- Extremely shrimple project I made with my friend where you can track your todos. You can view the site <a target="_blank" rel="noopener noreferrer" href="https://lewdguri.github.io/todo-list/t">here</a>.<br>
+            &emsp;- Extremely shrimple project I made with my friend where you can track your todos. You can view the site <a target="_blank" rel="noopener noreferrer" href="https://lewdguri.github.io/todo-list">here</a>.<br>
+            <span class="glow">Floopert Bloopert</span><br>
+            &emsp;- Low quality flappy bird knockoff. Everything is drawn by me and my friend. You can play the game <a target="_blank" rel="noopener noreferrer" href="https://lewdguri.itch.io/floopert-bloopert">here</a>.<br>
         `
     },
     {
