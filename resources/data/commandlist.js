@@ -98,23 +98,83 @@ const commands = [
             Hi, I'm <span class="glow">Gurian</span>. I'm a 16 year old student from <span class="glow">Czech Republic</span>. My interests include game and web development, <span class="glow">gaming (for Super Earth!)</span> and procrastinating. 
             I'm currently studying <span class="glow">IT</span> at a local high school. This website serves as a portfolio of my (beautiful) projects and a place to experiment with stuff.
         `
+    },
+    {
+        name: "rps [rock/paper/scissors]",
+        info: "Play rock paper scissors",
+        type: "function",
+        output: (playerChoice) => {
+            let choices = ["rock", "paper", "scissors"];
+            if(!playerChoice.some(r => choices.includes(r)) || playerChoice.length > 1) {
+                error(`rps ${playerChoice.join(" ")}`);
+                return;
+            }
+            let computerChoice = choices[Math.floor(Math.random() * choices.length)];
+            let result = "";
+            if(playerChoice == computerChoice) {
+                result = "It's a tie!";
+            } else if(
+                playerChoice == "rock" && computerChoice == "scissors" || 
+                playerChoice == "paper" && computerChoice == "rock" ||
+                playerChoice == "scissors" && computerChoice == "paper"
+            ) {
+                result = "You win!";
+            } else {
+                result = "You lose!";
+            }
+            print(result)
+        }
+    },
+    {
+        name: "help",
+        info: "List of available commands",
+        type: "function",
+        output: (args) => {
+            if(args.length == 0) {
+                print("<span class=\"glow\">help</span><br> &emsp;- list of all available commands<br>" + helpOutput);
+            } else {
+                if(!args.some(r => commands.map(obj => obj.name).includes(r)) || args.length > 1) {
+                    error(`help ${args.join(" ")}`);
+                    return;
+                }
+
+                if(commands.some(command => command.name.split(" ")[0] == args[0])) {
+                    let command = commands.find(command => command.name.split(" ")[0] == args[0]);
+                    print(`<span class="glow">${command.name}</span><br> &emsp;- ${command.info}`);
+                }
+            }
+        }
+    },
+    {
+        name: "roll [maxNumber]",
+        info: "Roll a n-dice",
+        type: "function",
+        output: (maxNumber) => {
+            if(isNaN(maxNumber)) {
+                print("Please provide a valid number!");
+                return;
+            } else if(maxNumber.length != 0) {
+                print(`You rolled a ${Math.floor(Math.random() * maxNumber) + 1}!`);
+                return;
+            }
+            let randomNum = Math.floor(Math.random() * 100) + 1;
+            if(randomNum == 69) {
+                print("69. Nice.")
+            } else {
+                print(`You rolled a ${randomNum}!`);
+            }
+        }
     }
 ]
 
-let helpCommand = {
-    name: "help",
-    info: "List of available commands",
-    type: "text",
-    output: "<span class=\"glow\">help</span><br> &emsp;- list of all available commands<br>"
-}
-
 commands.sort((a, b) => a.name.localeCompare(b.name));
+
+let helpOutput = "";
 
 commands.forEach(command => {
     if(command.type == "secret") return;
-    helpCommand.output += `
+    helpOutput += `
     <span class=\"glow\">${command.name}</span><br>
     &emsp;- ${command.info}<br>
     `
 });
-commands.push(helpCommand);

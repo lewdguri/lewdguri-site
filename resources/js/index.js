@@ -1,4 +1,4 @@
-const userInput = document.querySelector(".terminal-input");
+const userInput = document.querySelector("#input");
 const userInputArea = document.querySelector(".terminal-input-area");
 let previousCommands = [];
 let userInputs = "";
@@ -12,13 +12,13 @@ let observer = new MutationObserver(() => {
 observer.observe(terminalContainer, { childList: true });
 
 window.addEventListener("keydown", function(e) {
-    if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+    if(["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
         e.preventDefault();
     }
 }, false);
 
 //user input
-document.querySelector(".terminal-input-area input").addEventListener("keydown", (event) => {
+document.querySelector("#input").addEventListener("keydown", (event) => {
     userInputs += event.key;
     if(userInputs.match(/ArrowUpArrowRightArrowDownArrowDownArrowDown/g)) {
         window.open("./resources/images/interesting.png", '_blank').focus();
@@ -26,8 +26,9 @@ document.querySelector(".terminal-input-area input").addEventListener("keydown",
     };
     
     if(event.key == "Enter") {
+        let [executedCommand, ...args] = userInput.value.split(" ");
         update();
-        execute(userInput.value);
+        execute(executedCommand, args);
         userInput.value = "";
         counter = 0;
     } else if(event.key == "ArrowUp") {
@@ -40,26 +41,31 @@ document.querySelector(".terminal-input-area input").addEventListener("keydown",
 });
 
 //execute user input
-const execute = (command) => {
+const execute = (command, args) => {
     for(let i = 0; i < commands.length; i++) {
-        if(commands[i].name == command) {
+        if(commands[i].name.split(" ")[0] == command) {
             if(commands[i].type == "function") {
-                commands[i].output();
+                commands[i].output(args);
                 return;
-            } else {
-                let output = document.createElement("div");
-                let p = document.createElement("p");
-    
-                output.appendChild(p);
-    
-                p.innerHTML = commands[i].output;
-                document.querySelector(".terminal-container").insertBefore(output, userInputArea);
+            } else if(args.length == 0){
+                print(commands[i].output);
                 return;
             }
         }
     }
-    error(command);
+    error(`` + command + ` ` + args.join(" "));
 };
+
+//print something
+const print = (text) => {
+    let output = document.createElement("div");
+    let p = document.createElement("p");
+
+    output.appendChild(p);
+
+    p.innerHTML = text;
+    document.querySelector(".terminal-container").insertBefore(output, userInputArea);
+}
 
 //update terminal
 const update = () => {
