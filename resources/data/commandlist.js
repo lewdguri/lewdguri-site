@@ -106,6 +106,10 @@ const commands = [
         output: (playerChoice) => {
             let choices = ["rock", "paper", "scissors"];
             if(!playerChoice.some(r => choices.includes(r)) || playerChoice.length > 1) {
+                if(playerChoice.length == 0) {
+                    print("You need to choose rock, paper, or scissors!");
+                    return;
+                }
                 error(`rps ${playerChoice.join(" ")}`);
                 return;
             }
@@ -133,13 +137,13 @@ const commands = [
             if(args.length == 0) {
                 print("<span class=\"glow\">help</span><br> &emsp;- list of all available commands<br>" + helpOutput);
             } else {
-                if(!args.some(r => commands.map(obj => obj.name).includes(r)) || args.length > 1) {
+                if (!args.some(arg => commands.map(obj => obj.name.split(" ")[0]).includes(arg)) || args.length > 1) {
                     error(`help ${args.join(" ")}`);
                     return;
                 }
 
-                if(commands.some(command => command.name.split(" ")[0] == args[0])) {
-                    let command = commands.find(command => command.name.split(" ")[0] == args[0]);
+                let command = commands.find(command => command.name.split(" ")[0] == args[0]);
+                if (command) {
                     print(`<span class="glow">${command.name}</span><br> &emsp;- ${command.info}`);
                 }
             }
@@ -151,7 +155,7 @@ const commands = [
         type: "function",
         output: (maxNumber) => {
             if(isNaN(maxNumber)) {
-                print("Please provide a valid number!");
+                error(`roll ${maxNumber.join(" ")}`);
                 return;
             } else if(maxNumber.length != 0) {
                 print(`You rolled a ${Math.floor(Math.random() * maxNumber) + 1}!`);
