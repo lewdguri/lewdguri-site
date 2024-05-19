@@ -168,6 +168,33 @@ const commands = [
                 print(`You rolled a ${randomNum}!`);
             }
         }
+    },
+    {
+        name: "year",
+        info: "Show the progress bar of the current year",
+        type: "function",
+        output: () => {
+            let now = new Date();
+            let start = new Date(now.getFullYear(), 0, 0);
+            let diff = now - start;
+            let day = Math.floor(diff / (1000 * 60 * 60 * 24));
+            let dayOfWeek = now.getDay() || 7;
+            if (dayOfWeek !== 7) dayOfWeek++;
+    
+            const getProgressBar = (percent) => "#".repeat(Math.round((percent * (2/3)) / 2)) + "-".repeat(33 - Math.round((percent * (2/3)) / 2));
+    
+            let yearPercent = (day / 365) * 100;
+            let monthDays = new Date(now.getFullYear(), now.getMonth()+1, 0).getDate();
+            let monthPercent = (now.getDate() / monthDays) * 100;
+            let weekPercent = (dayOfWeek / 7) * 100;
+    
+            print(`
+                <span class="glow">${now.getFullYear()}</span><br>
+                Year progress:&nbsp [${getProgressBar(yearPercent)}] ${yearPercent.toFixed(1)}%<br>
+                Month progress: [${getProgressBar(monthPercent)}] ${monthPercent.toFixed(1)}%<br>
+                Week progress:&nbsp [${getProgressBar(weekPercent)}] ${dayOfWeek} / 7<br>
+            `);
+        }
     }
 ]
 
