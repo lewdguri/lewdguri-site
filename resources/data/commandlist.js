@@ -54,7 +54,7 @@ const commands = [
         type: "function",
         output: () => {
             let random = Math.floor(Math.random() * commands.length);
-            execute(commands[random].name);
+            execute(commands[random].name.split(" ")[0]);
         }
     },
     {

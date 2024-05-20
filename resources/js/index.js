@@ -49,7 +49,7 @@ document.querySelector("#input").addEventListener("keydown", (event) => {
 });
 
 //execute user input
-const execute = (command, args) => {
+const execute = (command, args = []) => {
     for(let i = 0; i < commands.length; i++) {
         if(commands[i].name.split(" ")[0] == command) {
             if(commands[i].type == "function") {
