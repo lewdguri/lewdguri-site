@@ -3,7 +3,7 @@ const userInputArea = document.querySelector(".terminal-input-area");
 let previousCommands = [];
 let userInputs = "";
 let counter = 0;
-let isDesktop = true;
+let isDesktop = window.matchMedia("(min-width: 700px)").matches;
 
 //auto scroll to bottom & prevent arrow keys from scrolling
 let terminalContainer = document.querySelector('.terminal-container');
