@@ -3,6 +3,7 @@ const userInputArea = document.querySelector(".terminal-input-area");
 let previousCommands = [];
 let userInputs = "";
 let counter = 0;
+let isDesktop = true;
 
 //auto scroll to bottom & prevent arrow keys from scrolling
 let terminalContainer = document.querySelector('.terminal-container');
@@ -16,6 +17,13 @@ window.addEventListener("keydown", function(e) {
         e.preventDefault();
     }
 }, false);
+
+//media query
+let x = window.matchMedia("(max-width: 700px)")
+
+x.addEventListener("change", function() {
+    isDesktop = window.matchMedia("(min-width: 700px)").matches;
+});
 
 //user input
 document.querySelector("#input").addEventListener("keydown", (event) => {

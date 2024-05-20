@@ -179,10 +179,13 @@ const commands = [
             let diff = now - start;
             let day = Math.floor(diff / (1000 * 60 * 60 * 24));
             let dayOfWeek = now.getDay() || 7;
-            if (dayOfWeek !== 7) dayOfWeek++;
     
-            const getProgressBar = (percent) => "#".repeat(Math.round((percent * (2/3)) / 2)) + "-".repeat(33 - Math.round((percent * (2/3)) / 2));
-    
+            const getProgressBar = (percent, isDesktop) => {
+                let length = isDesktop ? Math.round((percent * (2/3)) / 2) : Math.round((percent * (2/3)) / 4);
+                let remaining = isDesktop ? 33 - length : 16 - length;
+                return "#".repeat(length) + "-".repeat(remaining);
+            };   
+            
             let yearPercent = (day / 365) * 100;
             let monthDays = new Date(now.getFullYear(), now.getMonth()+1, 0).getDate();
             let monthPercent = (now.getDate() / monthDays) * 100;
@@ -190,9 +193,9 @@ const commands = [
     
             print(`
                 <span class="glow">${now.getFullYear()}</span><br>
-                Year progress:&nbsp [${getProgressBar(yearPercent)}] ${yearPercent.toFixed(1)}%<br>
-                Month progress: [${getProgressBar(monthPercent)}] ${monthPercent.toFixed(1)}%<br>
-                Week progress:&nbsp [${getProgressBar(weekPercent)}] ${dayOfWeek} / 7<br>
+                Year progress: ${isDesktop? "&nbsp" : "<br>"}[${getProgressBar(yearPercent, isDesktop)}] ${yearPercent.toFixed(1)}%<br>
+                Month progress: ${isDesktop? "" : "<br>"}[${getProgressBar(monthPercent, isDesktop)}] ${monthPercent.toFixed(1)}%<br>
+                Week progress: ${isDesktop? "&nbsp" : "<br>"}[${getProgressBar(weekPercent, isDesktop)}] ${dayOfWeek} / 7<br>
             `);
         }
     }
