@@ -135,7 +135,7 @@ const commands = [
         type: "function",
         output: (args) => {
             if(args.length == 0) {
-                print("<span class=\"glow\">help</span><br> &emsp;- list of all available commands<br>" + helpOutput);
+                print(helpOutput);
             } else {
                 if (!args.some(arg => commands.map(obj => obj.name.split(" ")[0]).includes(arg)) || args.length > 1) {
                     error(`help ${args.join(" ")}`);
@@ -205,7 +205,7 @@ commands.sort((a, b) => a.name.localeCompare(b.name));
 
 let helpOutput = "";
 
-commands.forEach(command => {
+commands.map(command => {
     if(command.type == "secret") return;
     helpOutput += `
     <span class=\"glow\">${command.name}</span><br>
