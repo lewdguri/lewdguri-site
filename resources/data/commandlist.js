@@ -62,7 +62,7 @@ const commands = [
         info: "Information about this website",
         type: "text",
         output: `
-            I made this website using <span class="glow">HTML</span>, <span class="glow">CSS</span>, and <span class="glow">JavaScript</span>. It's hosted on GitHub Pages.<br>
+            I made this website using <span class="glow">HTML</span>, <span class="glow">CSS</span>, and <span class="glow">JavaScript</span>. It's deployed by <a target="_blank" rel="noopener noreferrer" href="https://vercel.com/">Vercel</a><br>
             It's a simple terminal emulator with a few commands inspired by <a target="_blank" rel="noopener noreferrer" href="https://craigfeldman.com/">craigfeldman.com</a>.<br>
             <span class="glow">Source code</span> can be found <a target="_blank" rel="noopener noreferrer" href="https://github.com/lewdguri/lewdguri-site">here</a>.<br>
             `
@@ -198,6 +198,21 @@ const commands = [
                 Week progress: ${isDesktop? "&nbsp" : "<br>"}[${getProgressBar(weekPercent, isDesktop)}] ${dayOfWeek} / 7<br>
             `);
         }
+    },
+    {
+        name: "goals",
+        info: "My current goals",
+        type: "text",
+        output: `
+            <span class="glow">Web Dev</span><br>
+            - Learn React<br>
+            - Learn Express.js<br>
+            - Create & deploy a website utilizing a tech stack (like MERN)<br>
+            <span class="glow">Game Dev</span><br>
+            - participate in a game jam<br>
+            <span class="glow">Other</span><br>
+            - Contribute to any open source project<br>
+        `
     }
 ]
 
