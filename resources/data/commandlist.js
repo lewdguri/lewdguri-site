@@ -207,6 +207,7 @@ const commands = [
             <span class="glow">Web Dev</span><br>
             - Learn React<br>
             - Learn Express.js<br>
+            - Convert this site to a React+TS app<br>
             - Create & deploy a website utilizing a tech stack (like MERN)<br>
             <span class="glow">Game Dev</span><br>
             - participate in a game jam<br>
