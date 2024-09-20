@@ -55,8 +55,8 @@ const commands = [
         type: "text",
         output: `
             <span class="glow">Joystick</span> - VKB Gunfighter MKIV<br>
-            &emsp;<span class="glow>"Grip</span> - Modern Combat Grip Ultimate<br>
-            &emsp;<span class="glow>"Extension</span> - 100mm extension<br>
+            &emsp;<span class="glow">Grip</span> - Modern Combat Grip Ultimate<br>
+            &emsp;<span class="glow">Extension</span> - 100mm extension<br>
             <span class="glow">Throttle</span> - VKB STECS MAX<br>
             <span class="glow">Rudder Pedals</span> - VKB T-Rudder MKV<br>
             <span class="glow">Head Tracking</span> - DelanClip<br>
@@ -109,7 +109,7 @@ const commands = [
         info: "If you want to know more about me",
         type: "text",
         output: `
-            Hi, I'm <span class="glow">Gurian</span>. I'm a 16 year old student from <span class="glow">Czech Republic</span>. My interests include game and web development, <span class="glow">gaming</span>, flight simming and procrastinating. 
+            Hi, I'm <span class="glow">Gurian</span>. I'm a 16 year old student from <span class="glow">Czech Republic</span>. My interests include game and web development, <span class="glow">gaming</span> and flight simming (F/A-18C in DCS).
             I'm currently studying <span class="glow">IT</span> at a local high school. This website serves as a portfolio and to showcase my (beautiful) projects.
         `
     },
