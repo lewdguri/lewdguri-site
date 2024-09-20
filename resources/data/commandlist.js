@@ -28,7 +28,7 @@ const commands = [
         output: `
             <span class="glow">My friend's site</span><br>
             &emsp;- <a target="_blank" rel="noopener noreferrer" href="https://www.freezerbox.site/">freezerbox.site</a><br>
-            <span class="glow">Misaki</span><br>
+            <span class="glow">Rin's art gallery</span><br>
             &emsp;- <a target="_blank" rel="noopener noreferrer" href="https://imgur.com/a/ca8wsp8/">Imgur</a><br>
         `
     },
@@ -45,7 +45,21 @@ const commands = [
             <span class="glow">Storage</span><br>
             &emsp;- 256GB SATA SSD<br>
             &emsp;- 512GB M.2 NVME SSD<br>
+            &emsp;- 1TB M.2 NVME SSD<br>
             &emsp;- 1TB HDD<br>
+        `,
+    },
+    {
+        name: "flightgear",
+        info: "My kit for playing flight simulators",
+        type: "text",
+        output: `
+            <span class="glow">Joystick</span> - VKB Gunfighter MKIV<br>
+            &emsp;<span class="glow>"Grip</span> - Modern Combat Grip Ultimate<br>
+            &emsp;<span class="glow>"Extension</span> - 100mm extension<br>
+            <span class="glow">Throttle</span> - VKB STECS MAX<br>
+            <span class="glow">Rudder Pedals</span> - VKB T-Rudder MKV<br>
+            <span class="glow">Head Tracking</span> - DelanClip<br>
         `,
     },
     {
@@ -80,7 +94,7 @@ const commands = [
         output: `
             <span class="glow">This website</span><br>
             &emsp;- Simple terminal emulator I made using HTML, CSS, and JavaScript.<br>
-            <span class="glow">Misaki Discord bot</span><br>
+            <span class="glow">Rin Discord bot</span><br>
             &emsp;- General use discord bot I collaborated with my friend. Among it's capabalities is chatbot using openAI & more uneccesary stuff. Source code not public.<br>
             <span class="glow">Kitty picker</span><br>
             &emsp;- Random cat image generator I made with my friend using a free cat API. You can view the site <a target="_blank" rel="noopener noreferrer" href="https://lewdguri.github.io/kitty-picker/">here</a>.<br>
@@ -95,8 +109,8 @@ const commands = [
         info: "If you want to know more about me",
         type: "text",
         output: `
-            Hi, I'm <span class="glow">Gurian</span>. I'm a 16 year old student from <span class="glow">Czech Republic</span>. My interests include game and web development, <span class="glow">gaming (for Super Earth!)</span> and procrastinating. 
-            I'm currently studying <span class="glow">IT</span> at a local high school. This website serves as a portfolio of my (beautiful) projects and a place to experiment with stuff.
+            Hi, I'm <span class="glow">Gurian</span>. I'm a 16 year old student from <span class="glow">Czech Republic</span>. My interests include game and web development, <span class="glow">gaming</span>, flight simming and procrastinating. 
+            I'm currently studying <span class="glow">IT</span> at a local high school. This website serves as a portfolio and to showcase my (beautiful) projects.
         `
     },
     {
@@ -206,11 +220,10 @@ const commands = [
         output: `
             <span class="glow">Web Dev</span><br>
             - Learn React<br>
-            - Learn Express.js<br>
-            - Convert this site to a React+TS app<br>
-            - Create & deploy a website utilizing a tech stack (like MERN)<br>
+            - Learn php<br>
             <span class="glow">Game Dev</span><br>
             - participate in a game jam<br>
+            - Learn C#<br>
             <span class="glow">Other</span><br>
             - Contribute to any open source project<br>
         `
